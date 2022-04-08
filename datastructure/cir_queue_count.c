@@ -5,7 +5,7 @@
 #define MAX_QUEUE_SIZE 5
 typedef int element;
 typedef struct { // 큐 타입
-	int front, rear, count;
+	int front, rear, count, capacity;
 	element* data;
 } QueueType;
 // 오류 함수
@@ -20,24 +20,28 @@ void init_queue(QueueType* q)
 {
 	q->count = q->front = q->rear = 0;
 	q->data = (element*)malloc(sizeof(element)*MAX_QUEUE_SIZE);
+	// capacity에 MAX_QUEUE_SIZE를 할당
+	q->capacity = MAX_QUEUE_SIZE;
 }
 // 공백 상태 검출 함수
 int is_empty(QueueType* q)
 {
-	// 공백상태는 count를 그대로 return하여, count가 0인경우 false, 그 외의 모든 경우는 true로 판정됨
-	// return q->count;
-	return (q->front == q->rear);
+	// q의 count와 0의 비교식을 그대로 return하여 evaluation 되었을 경우 count가 0일때 true, 이외의 경우는 false로 return
+	return q->count == 0;
 }
 // 포화 상태 검출 함수
 int is_full(QueueType* q)
 {
-	// return ((q->rear + 1) % MAX_QUEUE_SIZE == q->front);
-	return q->count == sizeof(q->data) / sizeof(element);
+	// count와 capacity를 비교하는 구문을 그대로 return하여 같을 경우, full 상태로 인식
+	return q->count == q->capacity;
 }
 
 // resize 함수
+// realloc을 활용하여 기존에 할당했던 크기의 2배를 재할당
 void resize(QueueType* q) {
-	q->data = (element*)realloc(q->data, sizeof(MAX_QUEUE_SIZE) * 2);
+	// 기존할당크기의 2배를 data에 재할당
+	q->data = (element*)realloc(q->data, sizeof(element) * q->capacity * 2);
+	q->capacity *= 2;
 }
 
 // 원형큐 출력 함수
@@ -48,7 +52,7 @@ void queue_print(QueueType* q)
 		int i = q->front;
 		do {
 			printf("%d | ", q->data[i]);
-			i = (i + 1) % (MAX_QUEUE_SIZE);
+			i++;
 			if (i == q->rear)
 				break;
 		} while (i != q->front);
@@ -90,18 +94,17 @@ int main(void)
 	int element;
 	init_queue(&queue);
 	printf("--데이터 추가 단계--\n");
-//	while (!is_full(&queue))
-	for(int i=0; i=10; i++)
+
+	// for문을 활용하여 queue에 데이터 100개를 삽입
+	for(int i=1; i<=100; i++)
 	{
 		if (is_full(&queue)) {
 			resize(&queue);
 		}
-		printf("정수를 입력하시오: ");
-		scanf("%d", &element);
-		enqueue(&queue, element);
+		enqueue(&queue, i);
 		queue_print(&queue);
 	}
-	printf("큐는 포화상태입니다.\n\n");
+	
 	printf("--데이터 삭제 단계--\n");
 	while (!is_empty(&queue))
 	{
