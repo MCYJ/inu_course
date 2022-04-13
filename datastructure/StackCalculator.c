@@ -130,6 +130,53 @@ int bracketCheck(char* ch) {
 		return 0;
 	}
 }
+// 연산자의 우선순위 반환 함수
+int prec(char op) {
+	switch (op) {
+	case '(': case ')': return 0;
+	case '+': case '-': return 1;
+	case '*': case '/': return 2;
+	}
+	return -1;
+}
+
+// 중위표기식 -> 후위표기식 변환함수
+void infix_to_postfix(char* ch) {
+	LinkedStackType* s;
+	init(&s);
+	element e;
+	int i = 0;
+	while (ch[i] != NULL) {
+		switch (ch[i])
+		{
+		case '+': case '-': case '/': case '*':
+			// 연산자의 우선순위비교 추가
+			while (!isEmpty(&s) && (prec(ch[i]) <= prec(peek(&s)))) {
+				printf("%c", pop(&s));
+			}
+			push(&s, ch[i]);
+			break;
+		case '(': case '[': case '{':
+			push(&s, ch[i]);
+			break;
+		case ')': case ']': case '}':
+			e = pop(&s);
+			while (e != '(' && e != '[' && e != '{') {
+				printf("%c", e);
+				e = pop(&s);
+			}
+			break;
+		default:
+			printf("%c", ch[i]);
+			break;
+		}
+		i++;
+	}
+	while (!isEmpty(&s)) {
+		e = pop(&s);
+		printf("%c", e);
+	}
+}
 
 int main(void) {
 	char *ch = (char *)malloc(sizeof(char)*100);
@@ -151,6 +198,7 @@ int main(void) {
 
 	// 중위식->후위식
 	// ch4 37page
+	infix_to_postfix(ch);
 	
 	// 중위식->전위식
 	// 후위식이랑 반대개념
