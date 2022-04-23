@@ -2,5 +2,5 @@
 % return : y
 % local variable : x, y, z
 function y = f(x)
-z = 2*x
-y = z+1
+z = 2*x;
+y = z+1;
