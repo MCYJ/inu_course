@@ -19,4 +19,4 @@ for k=1:1000
     end
 end
 % 허근의 갯수 출력
-fprintf("%d\n",img);
+fprintf("허근의 갯수: %d\n",img);
