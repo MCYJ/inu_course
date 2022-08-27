@@ -1,0 +1,16 @@
+C:\Users\82105\Documents\GitHub\INU_assignment\windows_programming\ConsoleTestSolution1\ConsoleTest\bin\Debug\net5.0\ConsoleTest.exe
+C:\Users\82105\Documents\GitHub\INU_assignment\windows_programming\ConsoleTestSolution1\ConsoleTest\bin\Debug\net5.0\ConsoleTest.deps.json
+C:\Users\82105\Documents\GitHub\INU_assignment\windows_programming\ConsoleTestSolution1\ConsoleTest\bin\Debug\net5.0\ConsoleTest.runtimeconfig.json
+C:\Users\82105\Documents\GitHub\INU_assignment\windows_programming\ConsoleTestSolution1\ConsoleTest\bin\Debug\net5.0\ConsoleTest.runtimeconfig.dev.json
+C:\Users\82105\Documents\GitHub\INU_assignment\windows_programming\ConsoleTestSolution1\ConsoleTest\bin\Debug\net5.0\ConsoleTest.dll
+C:\Users\82105\Documents\GitHub\INU_assignment\windows_programming\ConsoleTestSolution1\ConsoleTest\bin\Debug\net5.0\ref\ConsoleTest.dll
+C:\Users\82105\Documents\GitHub\INU_assignment\windows_programming\ConsoleTestSolution1\ConsoleTest\bin\Debug\net5.0\ConsoleTest.pdb
+C:\Users\82105\Documents\GitHub\INU_assignment\windows_programming\ConsoleTestSolution1\ConsoleTest\obj\Debug\net5.0\ConsoleTest.csproj.AssemblyReference.cache
+C:\Users\82105\Documents\GitHub\INU_assignment\windows_programming\ConsoleTestSolution1\ConsoleTest\obj\Debug\net5.0\ConsoleTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\82105\Documents\GitHub\INU_assignment\windows_programming\ConsoleTestSolution1\ConsoleTest\obj\Debug\net5.0\ConsoleTest.AssemblyInfoInputs.cache
+C:\Users\82105\Documents\GitHub\INU_assignment\windows_programming\ConsoleTestSolution1\ConsoleTest\obj\Debug\net5.0\ConsoleTest.AssemblyInfo.cs
+C:\Users\82105\Documents\GitHub\INU_assignment\windows_programming\ConsoleTestSolution1\ConsoleTest\obj\Debug\net5.0\ConsoleTest.csproj.CoreCompileInputs.cache
+C:\Users\82105\Documents\GitHub\INU_assignment\windows_programming\ConsoleTestSolution1\ConsoleTest\obj\Debug\net5.0\ConsoleTest.dll
+C:\Users\82105\Documents\GitHub\INU_assignment\windows_programming\ConsoleTestSolution1\ConsoleTest\obj\Debug\net5.0\ref\ConsoleTest.dll
+C:\Users\82105\Documents\GitHub\INU_assignment\windows_programming\ConsoleTestSolution1\ConsoleTest\obj\Debug\net5.0\ConsoleTest.pdb
+C:\Users\82105\Documents\GitHub\INU_assignment\windows_programming\ConsoleTestSolution1\ConsoleTest\obj\Debug\net5.0\ConsoleTest.genruntimeconfig.cache
