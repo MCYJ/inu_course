@@ -256,3 +256,5 @@ _NCrunch*
 *.out
 *.app
 *.vcxproj
+*.cache
+*.cache
