@@ -21,10 +21,15 @@ int main(void) {
 
 	Person p1(1);
 	cout << p1.getId() << endl;
-	Person p2 = p1;
+	Person &p2 = p1;
 	cout << p2.getId() << endl;
 
 	p2.setId(2);
+
+	cout << p1.getId() << endl;
+
+	Person p3(3);
+	getReference(p1) = p3;
 
 	cout << p1.getId() << endl;
 }
