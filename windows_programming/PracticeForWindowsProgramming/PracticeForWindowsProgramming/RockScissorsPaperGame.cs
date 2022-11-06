@@ -33,7 +33,7 @@ class RockScissorsPaper
             // 비정상 상황
             return "오류발생";
         }
-
+        
     }
     static void Main(string[] args)
     {
